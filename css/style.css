@@ -809,6 +809,12 @@
 			{
 				background-color: #e8edec;
 			}
+                        
+        #main a
+        {
+            color: #acd25a;
+            font-weight: bold;
+        }
 
 /*********************************************************************************/
 /* Main Company                                                                  */
