@@ -936,3 +936,8 @@
             position: absolute;
         }
         
+        .calendar_date {
+            font-size: 12pt;
+            font-weight:bolder;
+        }
+        
