@@ -26,11 +26,19 @@
                     show_gallery = function() {
                         $('#gallery').show();
                         $('#videos').hide();
+                        $('#clipping').hide();
                     }
 
                     show_videos = function() {
                         $('#gallery').hide();
                         $('#videos').show();
+                        $('#clipping').hide();
+                    }
+
+                    show_clipping = function() {
+                        $('#gallery').hide();
+                        $('#videos').hide();
+                        $('#clipping').show();
                     }
                 </script>
 		<noscript>
@@ -74,9 +82,9 @@
 							<ul>
 								<li><a href="company.html" id="company_link">Compa&ntilde;&iacute;a</a></li>
 								<li><a href="shows.html" id="shows_link">Espect&aacute;culos</a></li>
-								<li><a id="multimedia_link" class="nav_selected">Multimedia</a></li>
-								<li><a href="clipping.html" id="clipping_link">Clipping</a></li>
-								<li><a href="calendar.html" id="calendar_link">Calendar</a></li>
+								<li><a id="multimedia_link" class="nav_selected">Multimedia y Clipping</a></li>
+								<!--li><a href="clipping.html" id="clipping_link">Clipping</a></li-->
+								<li><a href="calendar.html" id="calendar_link">Calendario</a></li>
 								<li><a href="contact.html" id="contact_link">Contacto</a></li>
 							</ul>
 						</nav>
@@ -104,6 +112,7 @@
 
                                                         <button class="multimedia_button" type="button" onclick="show_gallery()">Im&aacute;genes</button>
                                                         <button class="multimedia_button" type="button" onclick="show_videos()">V&iacute;deos</button>
+                                                        <button class="multimedia_button" type="button" onclick="show_clipping()">Clipping</button>
 
                                                         <!--a href="" class="button scrolly" data-l10n-id="pics_button" onclick="show_gallery()">Fotos</a> 
                                                         <a href="" class="button scrolly" data-l10n-id="videos_button" onclick="show_videos()">Videos</a-->
@@ -124,22 +133,37 @@
                                                             <a href="images/gallery/gallery_12.jpg" data-lightbox="alodeya" ><img src="images/gallery/gallery_thumb_12.jpg" width="120px" alt="" /></a>
                                                             <a href="images/gallery/gallery_13.jpg" data-lightbox="alodeya"><img src="images/gallery/gallery_thumb_13.jpg" width="120px" alt="" /></a>
                                                             <a href="images/gallery/gallery_14.jpg" data-lightbox="alodeya" ><img src="images/gallery/gallery_thumb_14.jpg" width="120px" alt="" /></a>
-                                                            <a href="images/gallery/gallery_15.jpg" data-lightbox="alodeya"><img src="images/gallery/gallery_thumb_15.jpg" width="120px" alt="" /></a>
+                                                            <a href="images/gallery/gallery_15.jpg" data-lightbox="alodeya"><img src="images/gallery/gallery_thumb_15.jpg" width="120px" alt="" /></a>                                                            
+                                                            <a href="images/gallery/gallery_16.jpg" data-lightbox="alodeya"><img src="images/gallery/gallery_thumb_16.jpg" width="120px" alt="" /></a>
+                                                            <a href="images/gallery/gallery_17.jpg" data-lightbox="alodeya" ><img src="images/gallery/gallery_thumb_17.jpg" width="120px" alt="" /></a>
+                                                            <a href="images/gallery/gallery_18.jpg" data-lightbox="alodeya"><img src="images/gallery/gallery_thumb_18.jpg" width="120px" alt="" /></a>
+                                                            <a href="images/gallery/gallery_19.jpg" data-lightbox="alodeya"><img src="images/gallery/gallery_thumb_19.jpg" width="120px" alt="" /></a>
+                                                            <a href="images/gallery/gallery_20.jpg" data-lightbox="alodeya" ><img src="images/gallery/gallery_thumb_20.jpg" width="120px" alt="" /></a>
+                                                            <a href="images/gallery/gallery_21.jpg" data-lightbox="alodeya"><img src="images/gallery/gallery_thumb_21.jpg" width="120px" alt="" /></a>
+                                                            <a href="images/gallery/gallery_22.jpg" data-lightbox="alodeya"><img src="images/gallery/gallery_thumb_22.jpg" width="120px" alt="" /></a>
+                                                            <a href="images/gallery/gallery_23.jpg" data-lightbox="alodeya" ><img src="images/gallery/gallery_thumb_23.jpg" width="120px" alt="" /></a>
+                                                            <a href="images/gallery/gallery_24.jpg" data-lightbox="alodeya" ><img src="images/gallery/gallery_thumb_24.jpg" width="120px" alt="" /></a>
+                                                            <a href="images/gallery/gallery_25.jpg" data-lightbox="alodeya"><img src="images/gallery/gallery_thumb_25.jpg" width="120px" alt="" /></a>
+                                                            <a href="images/gallery/gallery_26.jpg" data-lightbox="alodeya"><img src="images/gallery/gallery_thumb_26.jpg" width="120px" alt="" /></a>
+                                                            <a href="images/gallery/gallery_27.jpg" data-lightbox="alodeya" ><img src="images/gallery/gallery_thumb_27.jpg" width="120px" alt="" /></a>
+                                                            <a href="images/gallery/gallery_28.jpg" data-lightbox="alodeya"><img src="images/gallery/gallery_thumb_28.jpg" width="120px" alt="" /></a>
+                                                            <a href="images/gallery/gallery_29.jpg" data-lightbox="alodeya" ><img src="images/gallery/gallery_thumb_29.jpg" width="120px" alt="" /></a>
+                                                            
                                 
                                                         </div>
                                                         <div id="videos" style="display: none;">
                                                             <div id="video_space">
                                                                 
                                                                 <div id="video1">
-                                                                    <h1>Son Recuerdos Teaser</h1> 
+                                                                    <h1>Son Recuerdos Sala</h1> 
                                                                     <div class="js-video [vimeo, widescreen]" >
                                                                         <iframe width="700" height="393" src="http://www.youtube.com/embed/pno22xIvmG0" frameborder="0" allowfullscreen></iframe>
                                                                         </div>
                                                                 </div>
                                                                 <div id="video2">
-                                                                    <h1>Son Recuerdos Entero</h1> 
+                                                                    <h1>Son Recuerdos Calle</h1> 
                                                                     <div class="js-video [vimeo, widescreen]" >
-                                                                        <iframe width="700" height="393" src="http://www.youtube.com/embed/bvl84aLqcfs" frameborder="0" allowfullscreen></iframe>
+                                                                        <iframe width="700" height="393" src="http://www.youtube.com/embed/ZRHVPeM6AyE" frameborder="0" allowfullscreen></iframe>
                                                                     </div>
                                                                 </div>
                                                                 <div id="video3">
@@ -148,9 +172,74 @@
                                                                         <iframe width="700" height="393" src="http://www.youtube.com/embed/3G9BIOssKks" frameborder="0" allowfullscreen></iframe>
                                                                     </div>
                                                                 </div>
+                                                                <div id="video2">
+                                                                    <h1>Son Recuerdos Entero</h1> 
+                                                                    <div class="js-video [vimeo, widescreen]" >
+                                                                        <iframe width="700" height="393" src="http://www.youtube.com/embed/bvl84aLqcfs" frameborder="0" allowfullscreen></iframe>
+                                                                    </div>
+                                                                </div>
                                                                 <p>Puedes encontrar m&aacute;s v&iacute;deos <a href="https://www.youtube.com/channel/UCZ1I9h0QdtT1a2TA7_zGc2A/videos" target="_blank">aqu&iacute;.</a></p>                                                            
                                                                 </div>
                                                         </div>
+                                                        <div id="clipping" style="display: none;">
+                                                            <div class="row">
+								<div class="4u">
+									<article class="item">
+										<a href="images/clipping/pda-22052015.jpg" data-lightbox="alodeya_pda_22052015" class="image fit"><img src="images/clipping/pda-22052015-thumb.jpg" alt="" /></a>
+										<header>
+											<h3>El peri&oacute;dico de Arag&oacute;n, 22-05-2015</h3>
+										</header>
+									</article>
+                                                                        <article class="item">
+										<a href="http://www.malabaresensutinta.com/2015/05/ra-ra-ra-la-amz-lo-vuelve-conseguir.html" class="image fit" target="_blank"><img src="images/clipping/mest-17052015.jpg" alt=""/></a>
+										<header>
+											<h3>Malabares en su Tinta, 17-05-2015</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="http://www.amzcreandocirco.com/2014/01/garibolo-xiii-puro-movimiento.html" class="image fit" target="_blank"><img src="images/clipping/amz-28012014.jpg" alt="" /></a>
+										<header>
+											<h3>AMZ Creando Circo, 28-01-2014</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u">
+									<article class="item">
+										<a href="images/clipping/pda-19042015.jpg" data-lightbox="alodeya_pda_19042015" class="image fit"><img src="images/clipping/pda-19042015-thumb.jpg" alt="" /></a>
+										<header>
+											<h3>El peri&oacute;dico de Arag&oacute;n, 19-04-2015</h3>
+										</header>
+									</article>
+                                                                        <article class="item">
+										<a href="images/clipping/hda-11112014.jpg" data-lightbox="alodeya_hda_11112014" class="image fit"><img src="images/clipping/hda-11112014.jpg" alt="" /></a>
+										<header>
+											<h3>Heraldo de Arag&oacute;n, 11-11-2014</h3>
+										</header>
+									</article>
+									<article class="item">
+										<a href="http://www.malabaresensutinta.com/2014/06/viii-encuentro-de-malabaristas-de.html" class="image fit" target="_blank"><img src="images/clipping/mest-22062014.jpg" alt=""/></a>
+										<header>
+											<h3>Malabares en su Tinta, 22-06-2014</h3>
+										</header>
+									</article>
+								</div>
+								<div class="4u">
+									<article class="item">
+										<a href="images/clipping/hda-29062014.jpg" data-lightbox="alodeya_hda_29062014" class="image fit"><img src="images/clipping/hda-29062014.jpg" alt="" /></a>
+										<header>
+											<h3>Heraldo de Arag&oacute;n, 29-06-2014</h3>
+										</header>
+									</article>
+                                                                        <article class="item">
+										<a href="http://www.europapress.es/aragon/noticia-museo-camon-aznar-patio-infanta-suman-noche-blanco-20140627162656.html" class="image fit" target="_blank"><img src="images/clipping/ep-27062014.jpg" alt="" /></a>
+										<header>
+											<h3>Europa Press, 27-06-2014</h3>
+										</header>
+									</article>
+								</div>
+							</div>
+                                                        </div>
+                                                        
 						</div>
 					</section>
 				
