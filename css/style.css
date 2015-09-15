@@ -602,7 +602,7 @@
 			
 				#header .icons a:hover
 				{
-					color: #fff;
+					color: #acd25a;
 				}
 
 	#logo
@@ -845,7 +845,7 @@
 	    -webkit-border-radius: 20px;
 	    -khtml-border-radius: 20px;
 	    border-radius: 10px;
-	    width: 80px;
+	    width: 100px;
 	}
         
         #gallery img
