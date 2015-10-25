@@ -86,7 +86,7 @@
 
 		header > p
 		{
-			margin: 1em 0 0 0;
+			margin: 25px 0 0 0;
 		}
 
 	footer
@@ -668,7 +668,6 @@
                                             color: #acd25a;
                                             font-weight: bold;
                                         }
-
 				
 					#nav ul li a span
 					{
@@ -702,7 +701,8 @@
 							{
 								color: #e27689;
 							}
-
+                               
+                               
 /*********************************************************************************/
 /* Footer                                                                        */
 /*********************************************************************************/
@@ -846,6 +846,7 @@
 	    -khtml-border-radius: 20px;
 	    border-radius: 10px;
 	    width: 100px;
+            font-size: 10pt;
 	}
         
         #gallery img
@@ -893,6 +894,7 @@
 	    -khtml-border-radius: 20px;
 	    border-radius: 10px;
 	    width: 180px;
+            font-size: 10pt;
 	}
         
         #video_promo
@@ -940,4 +942,24 @@
             font-size: 12pt;
             font-weight:bolder;
         }
+
+        #awards_logo
+        {
+            margin-top:-23px;
+	}
         
+        #awards_text
+        {
+            font-size: 12pt;
+            line-height: 20px;
+	}
+        
+        #show_text
+        {
+            padding-top: 30px;
+            text-align: justify;
+	}
+        
+        #gallery a:hover {
+            opacity: 0.4;
+        }

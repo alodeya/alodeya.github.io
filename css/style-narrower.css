@@ -177,3 +177,9 @@
 				height: 2.25em;
 				line-height: 2.25em;
 			}
+        
+        #awards_logo
+        {
+            text-align:right;
+	}
+        
