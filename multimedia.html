@@ -17,12 +17,32 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-               <link rel="resource" type="application/l10n" href="locales/locales.ini" />
-                <script src="js/l10n.js"></script>
                 <script src="js/jquery-1.11.0.min.js"></script>
+                <script src="js/jquery.localize.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/lightbox.min.js"></script>
                 <link href="css/lightbox.css" rel="stylesheet" />
-                <script>
+                <noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+                <script>                
+                    set_spanish = function() {                    
+                        // Switch and set spanish as the language
+                        var opts = { language: "es", pathPrefix: "./localization"};
+                        $("[data-localize]").localize("alodeya", opts);
+                        localStorage.setItem("language", "es");
+                    }
+
+                    set_english = function() {
+                        // Switch and set english as the language
+                        var opts = { language: "en", pathPrefix: "./localization"};
+                        $("[data-localize]").localize("alodeya", opts);
+                        localStorage.setItem("language", "en");
+                    }
+
                     show_gallery = function() {
                         $('#gallery').show();
                         $('#videos').hide();
@@ -41,81 +61,55 @@
                         $('#clipping').show();
                     }
                 </script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-wide.css" />
-		</noscript>
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
 	<body>
+            <!-- Header -->
+            <div id="header" class="skel-layers-fixed">
+                <div class="top">
+                    <!-- Logo -->
+                    <div id="logo">
+                        <a href="index.html" id="home_logo"><span class="image avatar170"><img src="images/marca.png" alt="Alodey&aacute;" /></span></a>
+                        <p id="activities" class="activities"><b data-localize="disciplines">Circo, danza, poes&iacute;a</b></p>
+                    </div>
 
-		<!-- Header -->
-			<div id="header" class="skel-layers-fixed">
+                    <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="company.html" id="company_link" data-localize="company">Compa&ntilde;&iacute;a</a></li>
+                            <li><a href="shows.html" id="shows_link" data-localize="shows">Espect&aacute;culos</a></li>
+                            <li><a id="multimedia_link" class="nav_selected" data-localize="multimedia">Multimedia y Clipping</a></li>
+                            <li><a href="calendar.html" id="calendar_link" data-localize="calendar">Calendario</a></li>
+                            <li><a href="contact.html" id="contact_link" data-localize="contact">Contacto</a></li>
+                            <li>
+                                <!-- Social Icons -->
+                                <ul class="icons">
+                                    <li><a href="https://www.facebook.com/people/Alodey‡-Circo-Danza/100006632836394" class="icon fa-facebook" target="_blank"></a></li>
+                                    <li><a href="contact.html" class="icon fa-envelope"></a></li><br>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <!-- Languages -->
+                <div class="bottom">
+                    <ul class="languages">
+                        <li><a href="multimedia.html" onclick="set_spanish()">Castellano</a></li>
+                        <li><a href="multimedia.html" onclick="set_english()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;English</a></li>
+                    </ul>
+                </div>
+            </div>
 
-				<div class="top">
-
-					<!-- Logo -->
-						<div id="logo">
-							<a href="index.html" id="home_logo"><span class="image avatar170"><img src="images/marca.png" alt="Alodey&aacute;" /></span></a>
-							<!--h1 id="title">Alodey&aacute;</h1>
-							<p id="activities" data-l10n-id="activities">Circo, danza, poes&iacute;a</p-->
-                                                        <p id="activities" class="activities"><b>Circo, danza, poes&iacute;a</b></p>
-						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<!--
-							
-								Prologue's nav expects links in one of two formats:
-								
-								1. Hash link (scrolls to a different section within the page)
-								
-								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
-
-								2. Standard link (sends the user to another page/site)
-
-								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
-							
-							-->
-							<ul>
-								<li><a href="company.html" id="company_link">Compa&ntilde;&iacute;a</a></li>
-								<li><a href="shows.html" id="shows_link">Espect&aacute;culos</a></li>
-								<li><a id="multimedia_link" class="nav_selected">Multimedia y Clipping</a></li>
-								<!--li><a href="clipping.html" id="clipping_link">Clipping</a></li-->
-								<li><a href="calendar.html" id="calendar_link">Calendario</a></li>
-								<li><a href="contact.html" id="contact_link">Contacto</a></li>
-							</ul>
-						</nav>
-						
-				</div>
-				
-				<div class="bottom">
-        
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://www.facebook.com/people/Alodey‡-Circo-Danza/100006632836394" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-							<li><a href="contact.html" class="icon fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-				
-				</div>
-			
-			</div>
-
-		<!-- Main -->
-			<div id="main">
+            <!-- Main -->
+            <div id="main">
 
 				<!-- Intro -->
 					<section id="top" class="one">
 						<div class="container">
 
-                                                        <button class="multimedia_button" type="button" onclick="show_gallery()">Im&aacute;genes</button>
-                                                        <button class="multimedia_button" type="button" onclick="show_videos()">V&iacute;deos</button>
+                                                        <button class="multimedia_button" type="button" onclick="show_gallery()" data-localize="mult.images">Im&aacute;genes</button>
+                                                        <button class="multimedia_button" type="button" onclick="show_videos()" data-localize="mult.videos">V&iacute;deos</button>
                                                         <button class="multimedia_button" type="button" onclick="show_clipping()">Clipping</button>
-
-                                                        <!--a href="" class="button scrolly" data-l10n-id="pics_button" onclick="show_gallery()">Fotos</a> 
-                                                        <a href="" class="button scrolly" data-l10n-id="videos_button" onclick="show_videos()">Videos</a-->
                                                         
                                                         <div id="gallery">
 
@@ -155,19 +149,19 @@
                                                             <div id="video_space">
                                                                 
                                                                 <div id="video1">
-                                                                    <h1>Son Recuerdos Sala</h1> 
+                                                                    <h1 data-localize="mult.theatre">Son Recuerdos Sala</h1> 
                                                                     <div class="js-video [vimeo, widescreen]" >
                                                                         <iframe width="700" height="393" src="http://www.youtube.com/embed/_WeRc2CUQyg" frameborder="0" allowfullscreen></iframe>
                                                                         </div>
                                                                 </div>
                                                                 <div id="video2">
-                                                                    <h1>Son Recuerdos Calle</h1> 
+                                                                    <h1 data-localize="mult.street">Son Recuerdos Calle</h1> 
                                                                     <div class="js-video [vimeo, widescreen]" >
                                                                         <iframe width="700" height="393" src="http://www.youtube.com/embed/ZRHVPeM6AyE" frameborder="0" allowfullscreen></iframe>
                                                                     </div>
                                                                 </div>
                                                                 <div id="video3">
-                                                                    <h1>Solo Mazas</h1> 
+                                                                    <h1 data-localize="mult.solo">Solo Mazas</h1> 
                                                                     <div class="js-video [vimeo, widescreen]" >
                                                                         <iframe width="700" height="393" src="http://www.youtube.com/embed/3G9BIOssKks" frameborder="0" allowfullscreen></iframe>
                                                                     </div>
@@ -178,7 +172,7 @@
                                                                         <iframe width="700" height="393" src="http://www.youtube.com/embed/bvl84aLqcfs" frameborder="0" allowfullscreen></iframe>
                                                                     </div>
                                                                 </div-->
-                                                                <p>Puedes encontrar m&aacute;s v&iacute;deos <a href="https://www.youtube.com/channel/UCZ1I9h0QdtT1a2TA7_zGc2A/videos" target="_blank">aqu&iacute;.</a></p>                                                            
+                                                                <p><span data-localize="mult.morevideos">Puedes encontrar m&aacute;s v&iacute;deos </span><a href="https://www.youtube.com/channel/UCZ1I9h0QdtT1a2TA7_zGc2A/videos" target="_blank" data-localize="aqui">aqu&iacute;.</a></p>                                                            
                                                                 </div>
                                                         </div>
                                                         <div id="clipping" style="display: none;">
@@ -267,14 +261,24 @@
 				
 			</div>
 
-		<!-- Footer -->
-			<div id="footer">
-				
-				<a href="index.html" id="home_logo_bottom"><span class="image avatar90"><img src="images/logo.png" alt="Home" /></span></a><br>
-
-                                <a class="email" href="mailto:ciaalodeya@gmail.com">ciaalodeya&#64;gmail.com</a> <br/ >(+34) 627 622 744
-                                <br>
-                                    				
-			</div>
-	</body>
+        <!-- Footer -->
+        <div id="footer">
+            <a href="index.html" id="home_logo_bottom"><span class="image avatar90"><img src="images/logo.png" alt="Home" /></span></a><br>
+            <a class="email" href="mailto:ciaalodeya@gmail.com">ciaalodeya&#64;gmail.com</a> <br/ >(+34) 627 622 744
+            <br>
+        </div>
+        <script>
+            if (localStorage.getItem("language") === null) {
+                // Set browser language
+                var opts = { pathPrefix: "./localization"};
+                $("[data-localize]").localize("alodeya", opts);
+            }
+            else if (localStorage.getItem("language").localeCompare("es") == 0){
+                set_spanish();
+            }
+            else {
+                set_english();
+            }
+        </script>
+    </body>
 </html>

@@ -17,8 +17,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-                <link rel="resource" type="application/l10n" href="locales/locales.ini" />
-                <script src="js/l10n.js"></script>
+                <script src="js/jquery.localize.min.js" type="text/javascript" charset="utf-8"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -26,63 +25,62 @@
 		</noscript>
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+                <script>                
+                    set_spanish = function() {                    
+                        // Switch and set spanish as the language
+                        var opts = { language: "es", pathPrefix: "./localization"};
+                        $("[data-localize]").localize("alodeya", opts);
+                        localStorage.setItem("language", "es");
+                    }
+
+                    set_english = function() {
+                        // Switch and set english as the language
+                        var opts = { language: "en", pathPrefix: "./localization"};
+                        $("[data-localize]").localize("alodeya", opts);
+                        localStorage.setItem("language", "en");
+                    }
+            </script>
 	</head>
 	<body>
+            <!-- Header -->
+            <div id="header" class="skel-layers-fixed">
+                <div class="top">
+                    <!-- Logo -->
+                    <div id="logo">
+                        <a href="index.html" id="home_logo"><span class="image avatar170"><img src="images/marca.png" alt="Alodey&aacute;" /></span></a>
+                        <p id="activities" class="activities"><b data-localize="disciplines">Circo, danza, poes&iacute;a</b></p>
+                    </div>
 
-		<!-- Header -->
-			<div id="header" class="skel-layers-fixed">
+                    <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="company.html" id="company_link" data-localize="company">Compa&ntilde;&iacute;a</a></li>
+                            <li><a href="shows.html" id="shows_link" data-localize="shows">Espect&aacute;culos</a></li>
+                            <li><a href="multimedia.html" id="multimedia_link" data-localize="multimedia">Multimedia y Clipping</a></li>
+                            <li><a href="calendar.html" id="calendar_link" data-localize="calendar">Calendario</a></li>
+                            <li><a id="contact_link" class="nav_selected" data-localize="contact">Contacto</a></li>
+                            <li>
+                                <!-- Social Icons -->
+                                <ul class="icons">
+                                    <li><a href="https://www.facebook.com/people/Alodey‡-Circo-Danza/100006632836394" class="icon fa-facebook" target="_blank"></a></li>
+                                    <li><a href="contact.html" class="icon fa-envelope"></a></li><br>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <!-- Languages -->
+                <div class="bottom">
+                    <ul class="languages">
+                        <li><a href="contact.html" onclick="set_spanish()">Castellano</a></li>
+                        <li><a href="contact.html" onclick="set_english()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;English</a></li>
+                    </ul>
+                </div>
+            </div>
 
-				<div class="top">
-
-					<!-- Logo -->
-						<div id="logo">
-							<a href="index.html" id="home_logo"><span class="image avatar170"><img src="images/marca.png" alt="Alodey&aacute;" /></span></a>
-							<!--h1 id="title">Alodey&aacute;</h1>
-							<p id="activities" data-l10n-id="activities">Circo, danza, poes&iacute;a</p-->
-                                                        <p id="activities" class="activities"><b>Circo, danza, poes&iacute;a</b></p>
-						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<!--
-							
-								Prologue's nav expects links in one of two formats:
-								
-								1. Hash link (scrolls to a different section within the page)
-								
-								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
-
-								2. Standard link (sends the user to another page/site)
-
-								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
-							
-							-->
-							<ul>
-								<li><a href="company.html" id="company_link">Compa&ntilde;&iacute;a</a></li>
-								<li><a href="shows.html" id="shows_link">Espect&aacute;culos</a></li>
-								<li><a href="multimedia.html" id="multimedia_link">Multimedia y Clipping</a></li>
-								<!--li><a href="clipping.html" id="clipping_link">Clipping</a></li-->
-								<li><a href="calendar.html" id="calendar_link">Calendario</a></li>
-								<li><a id="contact_link" class="nav_selected">Contacto</a></li>
-							</ul>
-						</nav>
-						
-				</div>
-				
-				<div class="bottom">
-        
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://www.facebook.com/people/Alodey‡-Circo-Danza/100006632836394" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-							<li><a href="contact.html" class="icon fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-				
-				</div>
-			
-			</div>
-
-		<!-- Main -->
-			<div id="main">
+            <!-- Main -->
+            <div id="main">
 
 					<section id="top" class="one">
                                             
@@ -93,9 +91,22 @@
                                             (+34) 627 622 744<br/ ><br/ >
                                             <span class="image avatar90"><img src="images/logo.png" alt="Home" /></span><br>
                                             <br>
-                                            Dise&ntilde;o de marca y logotipo: <b>Diana Antol&iacute;</b>, <a href="http://camisetasconectadas.com" target="_blank">Camisetas Conectadas</a><br>
-                                            Dise&ntilde;o material de distribuci&oacute;n: <a href="https://es-es.facebook.com/maiibarguen" target="_blank"><b>Mai Ibarg&uuml;en Photography</b></a>                                	</section>
+                                            <span data-localize="cont.diana">Dise&ntilde;o de marca y logotipo: <b>Diana Antol&iacute;</b></span>, <a href="http://camisetasconectadas.com" target="_blank">Camisetas Conectadas</a><br>
+                                            <span data-localize="cont.mai">Dise&ntilde;o material de distribuci&oacute;n: </span><b><a href="http://maiibarguen.com" target="_blank">Mai Ibarg&uuml;en Photography</a></b>                                	
+                                        </section>
 			</div>
-
-	</body>
+        <script>
+            if (localStorage.getItem("language") === null) {
+                // Set browser language
+                var opts = { pathPrefix: "./localization"};
+                $("[data-localize]").localize("alodeya", opts);
+            }
+            else if (localStorage.getItem("language").localeCompare("es") == 0){
+                set_spanish();
+            }
+            else {
+                set_english();
+            }
+        </script>
+    </body>
 </html>

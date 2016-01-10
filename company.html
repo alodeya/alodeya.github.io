@@ -17,8 +17,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-               <link rel="resource" type="application/l10n" href="locales/locales.ini" />
-                <script src="js/l10n.js"></script>
+                <script src="js/jquery.localize.min.js" type="text/javascript" charset="utf-8"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -26,51 +25,62 @@
 		</noscript>
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+                <script>                
+                    set_spanish = function() {                    
+                        // Switch and set spanish as the language
+                        var opts = { language: "es", pathPrefix: "./localization"};
+                        $("[data-localize]").localize("alodeya", opts);
+                        localStorage.setItem("language", "es");
+                    }
+
+                    set_english = function() {
+                        // Switch and set english as the language
+                        var opts = { language: "en", pathPrefix: "./localization"};
+                        $("[data-localize]").localize("alodeya", opts);
+                        localStorage.setItem("language", "en");
+                    }
+            </script>
 	</head>
 	<body>
+            <!-- Header -->
+            <div id="header" class="skel-layers-fixed">
+                <div class="top">
+                    <!-- Logo -->
+                    <div id="logo">
+                        <a href="index.html" id="home_logo"><span class="image avatar170"><img src="images/marca.png" alt="Alodey&aacute;" /></span></a>
+                        <p id="activities" class="activities"><b data-localize="disciplines">Circo, danza, poes&iacute;a</b></p>
+                    </div>
 
-		<!-- Header -->
-			<div id="header" class="skel-layers-fixed">
+                    <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            <li><a id="company_link" class="nav_selected" data-localize="company">Compa&ntilde;&iacute;a</a></li>
+                            <li><a href="shows.html" id="shows_link" data-localize="shows">Espect&aacute;culos</a></li>
+                            <li><a href="multimedia.html" id="multimedia_link" data-localize="multimedia">Multimedia y Clipping</a></li>
+                            <li><a href="calendar.html" id="calendar_link" data-localize="calendar">Calendario</a></li>
+                            <li><a href="contact.html" id="contact_link" data-localize="contact">Contacto</a></li>
+                            <li>
+                                <!-- Social Icons -->
+                                <ul class="icons">
+                                    <li><a href="https://www.facebook.com/people/Alodey‡-Circo-Danza/100006632836394" class="icon fa-facebook" target="_blank"></a></li>
+                                    <li><a href="contact.html" class="icon fa-envelope"></a></li><br>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <!-- Languages -->
+                <div class="bottom">
+                    <ul class="languages">
+                        <li><a href="company.html" onclick="set_spanish()">Castellano</a></li>
+                        <li><a href="company.html" onclick="set_english()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;English</a></li>
+                    </ul>
+                </div>
+            </div>
 
-				<div class="top">
-
-					<!-- Logo -->
-						<div id="logo">
-							<a href="index.html" id="home_logo"><span class="image avatar170"><img src="images/marca.png" alt="Alodey&aacute;" /></span></a>
-							<!--h1 id="title">Alodey&aacute;</h1>
-							<p id="activities" data-l10n-id="activities">Circo, danza, poes&iacute;a</p-->
-                                                        <p id="activities" class="activities"><b>Circo, danza, poes&iacute;a</b></p>
-						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a id="company_link" class="nav_selected">Compa&ntilde;&iacute;a</a></li>
-								<li><a href="shows.html" id="shows_link">Espect&aacute;culos</a></li>
-								<li><a href="multimedia.html" id="multimedia_link">Multimedia y Clipping</a></li>
-								<!--li><a href="clipping.html" id="clipping_link">Clipping</a></li-->
-								<li><a href="calendar.html" id="calendar_link">Calendario</a></li>
-								<li><a href="contact.html" id="contact_link">Contacto</a></li>
-
-							</ul>
-						</nav>
-						
-				</div>
-				
-				<div class="bottom">
-        
-					<!-- Social Icons -->
-						<ul class="icons">
-							<li><a href="https://www.facebook.com/people/Alodey‡-Circo-Danza/100006632836394" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-							<li><a href="contact.html" class="icon fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-				
-				</div>
-			
-			</div>
-
-		<!-- Main -->
-			<div id="main">
+            <!-- Main -->
+            <div id="main">
 
 				<!-- Cia. -->
 					<section id="alodeya" class="two">
@@ -86,10 +96,10 @@
                                                                 
                                                                 <img src="images/ciaalodeya.jpg" width="70%" alt="" />
                                                                 <br><br>
-                                                                <p>Alodey&aacute; Circo Danza surge de la inquietud de sus componentes de buscar nuevos caminos de expresi&oacute;n a trav&eacute;s de la sinergia entre distintas formas art&iacute;sticas. Mediante la poes&iacute;a, la m&uacute;sica, la danza y el circo desarrollan un lenguaje &iacute;ntimo y de gran elocuencia para contar historias de encuentros y desencuentros, de amor y desamor, de juego. Historias de gran potencia visual y de contenidos.<br>
+                                                                <p data-localize="bio.alodeya">Alodey&aacute; Circo Danza surge de la inquietud de sus componentes de buscar nuevos caminos de expresi&oacute;n a trav&eacute;s de la sinergia entre distintas formas art&iacute;sticas. Mediante la poes&iacute;a, la m&uacute;sica, la danza y el circo desarrollan un lenguaje &iacute;ntimo y de gran elocuencia para contar historias de encuentros y desencuentros, de amor y desamor, de juego. Historias de gran potencia visual y de contenidos.<br>
                                                                    Premio del Jurado al Mejor Espect&aacute;culo del Concurso Off de Calle Fiestas del Pilar 2015.<br>
                                                                    Premio Creaciones del Circo Aragon&eacute;s 2015 en su categor&iacute;a Mejor N&uacute;mero de Circo.</p>
-                                                                Puedes descargar el dossier <a href="images/DossierAlodeya.pdf" target="_blank">aqu&iacute;</a>.
+                                                                   <span data-localize="bio.dossier">Puedes descargar el dossier </span><a href="images/DossierAlodeya.pdf" target="_blank">aqu&iacute; (castellano)</a> <a href="images/DossierAlodeya.pdf" target="_blank">or here (English)</a>.
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -109,7 +119,7 @@
                                                                     <h2>Edu</h2>
                                                                 </header>
 							
-                                                                <p>Una d&eacute;cada despu&eacute;s de coger su primera pelota, Edu ha desarrollado un estilo personal de entender los malabares y mezclarlos con la danza y el movimiento. En su formacion ha trabajado con artistas de diferentes disciplinas desde la danza y la acrobacia hasta los malabares con profesionales como Stefan Sing o Gandini Juggling.</p>
+                                                                <p data-localize="bio.edu">Una d&eacute;cada despu&eacute;s de coger su primera pelota, Edu ha desarrollado un estilo personal de entender los malabares y mezclarlos con la danza y el movimiento. En su formacion ha trabajado con artistas de diferentes disciplinas desde la danza y la acrobacia hasta los malabares con profesionales como Stefan Sing o Gandini Juggling.</p>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -130,7 +140,7 @@
                                                                     <h2>Pau</h2>
                                                                 </header>
     
-                                                                <p>Profesora de danza, bailarina y core&oacute;grafa inmersa en proyectos de educaci&oacute;n emocional y crecimiento personal. Su dilatada trayectoria como bailarina le ha llevado a trabajar en el Circo del Sol, en Parque Espa&ntilde;a en Jap&oacute;n y por festivales por Europa. Es tambi&eacute;n miembro directivo de Enacci&oacute;n Danza que apoya el desarrollo de formas de danza contempor&aacute;neas con procesos de participaci&oacute;n social.</p>
+                                                                <p data-localize="bio.pau">Profesora de danza, bailarina y core&oacute;grafa inmersa en proyectos de educaci&oacute;n emocional y crecimiento personal. Su dilatada trayectoria como bailarina le ha llevado a trabajar en el Circo del Sol, en Parque Espa&ntilde;a en Jap&oacute;n y por festivales por Europa. Es tambi&eacute;n miembro directivo de Enacci&oacute;n Danza que apoya el desarrollo de formas de danza contempor&aacute;neas con procesos de participaci&oacute;n social.</p>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -151,7 +161,7 @@
                                                                     <h2>Sof&iacute;a</h2>
                                                                 </header>
 
-                                                                <p>Dedica su tiempo a la educaci&oacute;n trabajando como maestra, a la musicoterapia, a la m&uacute;sica y a la escritura. Ha actuado en distintas formaciones como baterista y pianista, as&iacute; como publicado poemas en diversos libros, siendo la palabra una parte fundamental en su manera de mirar y entender por estar impl&iacute;cita en la literatura la transformaci&oacute;n constante y por entenderla como una v&iacute;a para dar forma a las preguntas.</p>
+                                                                <p data-localize="bio.sofia">Dedica su tiempo a la educaci&oacute;n trabajando como maestra, a la musicoterapia, a la m&uacute;sica y a la escritura. Ha actuado en distintas formaciones como baterista y pianista, as&iacute; como publicado poemas en diversos libros, siendo la palabra una parte fundamental en su manera de mirar y entender por estar impl&iacute;cita en la literatura la transformaci&oacute;n constante y por entenderla como una v&iacute;a para dar forma a las preguntas.</p>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -173,7 +183,7 @@
                                                                     <h2>Laura</h2>
                                                                 </header>
     
-                                                                <p>Bailarina profesional que no ha parado de bailar desde los 9 a&ntilde;os y que se rige por su formaci&oacute;n cl&aacute;sica y contempor&aacute;nea pero aportando una gran parte de sentimiento y fuerza personal. Ha bailado para la Cia de Ballet de Zaragoza, Sol Producciones (Madrid), Spain Mura Circo Mie Ken (Jap&oacute;n); bailarina en el proyecto Crossing of Movements Project (Korea) y actualmente forma parte de Tarde o Temprano Danza.</p>
+                                                                <p data-localize="bio.laura">Bailarina profesional que no ha parado de bailar desde los 9 a&ntilde;os y que se rige por su formaci&oacute;n cl&aacute;sica y contempor&aacute;nea pero aportando una gran parte de sentimiento y fuerza personal. Ha bailado para la Cia de Ballet de Zaragoza, Sol Producciones (Madrid), Spain Mura Circo Mie Ken (Jap&oacute;n); bailarina en el proyecto Crossing of Movements Project (Korea) y actualmente forma parte de Tarde o Temprano Danza.</p>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -183,14 +193,24 @@
                                 
 			</div>
 
-		<!-- Footer -->
-			<div id="footer">
-				
-				<a href="index.html" id="home_logo_bottom"><span class="image avatar90"><img src="images/logo.png" alt="Home" /></span></a><br>
-
-                                <a class="email" href="mailto:ciaalodeya@gmail.com">ciaalodeya&#64;gmail.com</a> <br/ >(+34) 627 622 744
-                                <br>
-                                    				
-			</div>
-	</body>
+        <!-- Footer -->
+        <div id="footer">
+            <a href="index.html" id="home_logo_bottom"><span class="image avatar90"><img src="images/logo.png" alt="Home" /></span></a><br>
+            <a class="email" href="mailto:ciaalodeya@gmail.com">ciaalodeya&#64;gmail.com</a> <br/ >(+34) 627 622 744
+            <br>
+        </div>
+        <script>
+            if (localStorage.getItem("language") === null) {
+                // Set browser language
+                var opts = { pathPrefix: "./localization"};
+                $("[data-localize]").localize("alodeya", opts);
+            }
+            else if (localStorage.getItem("language").localeCompare("es") == 0){
+                set_spanish();
+            }
+            else {
+                set_english();
+            }
+        </script>
+    </body>
 </html>

@@ -302,8 +302,24 @@
 					ul.icons a
 					{
 						display: inline-block;
-						width: 2em;
 						height: 2em;
+						line-height: 2em;
+						border: 0;
+					}
+                        ul.languages
+			{
+				cursor: default;
+			}	
+			
+				ul.languages li
+				{
+					display: inline-block;
+				}
+				
+					ul.languages a
+					{
+						display: inline-block;
+						width: 4em;
 						line-height: 2em;
 						text-align: center;
 						border: 0;
@@ -586,8 +602,7 @@
 		#header .icons
 		{
 			font-size: 0.8em;
-			margin: 0 0 1em 0;
-			text-align: center;
+			margin: 0 25px 1em 0;
 		}
 		
 			#header .icons a
@@ -604,6 +619,29 @@
 				{
 					color: #acd25a;
 				}
+                
+                #header .languages
+		{
+			font-size: 0.8em;
+			margin: 0 0 1em 0;
+			text-align: center;
+		}
+		
+			#header .languages a
+			{
+				color: #41484c;
+				-moz-transition: color 0.35s ease-in-out;
+				-webkit-transition: color 0.35s ease-in-out;
+				-o-transition: color 0.35s ease-in-out;
+				-ms-transition: color 0.35s ease-in-out;
+				transition: color 0.35s ease-in-out;
+			}
+			
+				#header .languages a:hover
+				{
+					color: #acd25a;
+				}
+
 
 	#logo
 	{
