@@ -943,12 +943,13 @@
                 margin: 0 auto;
 	}
         
-        #video1, #video2, #video3, #video_promo_sonrecuerdos, #video_promo_sonrecuerdosextracto, #video_promo_123y
+        #video1, #video2, #video3, #video_promo_sonrecuerdos, #video_promo_aware, #video_promo_outofstock
 	{
 		max-width: 599px;
 		text-align:center;
                 vertical-align:middle;
                 margin: 40px auto;
+                width: 90%;
 	}
 	
         .js-video {
@@ -1004,7 +1005,7 @@
             padding-top: 30px;
             text-align: justify;
 	}
-        
+                
         #gallery a:hover {
             opacity: 0.4;
         }
